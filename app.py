@@ -16,7 +16,7 @@ def generate_image():
     img = Image.new('RGB', (1080, 1080), color=(255, 255, 255))
     draw = ImageDraw.Draw(img)
 
-    font = ImageFont.truetype("arial.ttf", 42)
+    font = ImageFont.truetype("DejaVuSans.ttf", 42)
     caption = f'"{text}"\n\n— {author}'
     lines = textwrap.wrap(caption, width=40)
 
