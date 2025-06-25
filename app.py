@@ -22,7 +22,9 @@ def generate_image():
 
     y_text = 400
     for line in lines:
-        width, height = draw.textsize(line, font=font)
+        bbox = draw.textbbox((0, 0), line, font=font)
+        width = bbox[2] - bbox[0]
+        height = bbox[3] - bbox[1]
         draw.text(((1080 - width) / 2, y_text), line, font=font, fill=(0, 0, 0))
         y_text += height + 10
 
